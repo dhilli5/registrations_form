@@ -27,6 +27,13 @@ def registration(request):  # sourcery skip: extract-method
             NSPO=PFD.save(commit=False)
             NSPO.username=NSUO 
             NSPO.save()  
+            send_mail('wish',
+                      'good morning',
+                      'sana11111999@gmail.com',
+                      [NSUO.email],
+                      fail_silently=True)
+
+            
             return HttpResponse("registration successfully")
         
         else:
