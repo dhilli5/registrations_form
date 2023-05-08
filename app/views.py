@@ -7,6 +7,10 @@ from app.forms import *
 from django.core.mail import send_mail
 
 
+def home_page(request):
+    return render(request,'home_page.html')
+
+
 def registration(request):  # sourcery skip: extract-method
     ufo=UserForm()
     pfo=ProfileForm()
@@ -38,5 +42,4 @@ def registration(request):  # sourcery skip: extract-method
         
         else:
             return HttpResponse("data not valid")  
-    return render(request,'registration.html',d)       
-    
+    return render(request,'registration.html',d) 
