@@ -1,0 +1,22 @@
+{% extends 'dummy.html' %}
+{% block title %}
+    <title>display_profile</title>
+{% endblock %}
+
+{% block body_block %}
+<h1>display_profile</h1>
+<table border="3px">
+    <tr>
+        <th>user_name</th>
+        <th>email</th>
+        <th>address</th>
+        <th>profile_pic</th>
+    </tr>
+    <tr>
+        <td>{{uo.username}}</td>
+        <td>{{uo.email}}</td>
+        <td>{{po.address}}</td>
+        <td><img src="{{po.profile_pic.url}}" alt="no image" width="150px" height="150px"></td>
+    </tr>
+</table>
+{% endblock %}
